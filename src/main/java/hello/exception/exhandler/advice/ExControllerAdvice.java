@@ -28,6 +28,7 @@ public class ExControllerAdvice {
         return new ResponseEntity<>(errorResult, HttpStatus.BAD_REQUEST);
     }
 
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler
     public ErrorResult exHandler(Exception e) {
         log.error("[exceptionHandler] ex", e);

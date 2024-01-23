@@ -24,6 +24,11 @@ public class ApiExceptionV3Controller {
         }
         return new MemberDto(id,"hello " + id);
     }
+
+    @GetMapping("/test")
+    public String test() throws Exception {
+        throw new Exception("test");
+    }
     @Data
     @AllArgsConstructor
     static class MemberDto{
